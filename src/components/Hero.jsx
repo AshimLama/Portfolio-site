@@ -27,7 +27,7 @@ const Hero = () => {
     <section className="min-h-screen bg-white text-gray-900">
       {/* Navbar */}
       <nav className="flex justify-between items-center p-6 lg:px-12 lg:py-8">
-        <div className="text-2xl font-bold text-black">AshimGhising.Dev</div>
+        <div className="text-2xl font-bold text-black">AshimGhising</div>
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
           {navItems.map(({ name, target }) => (
@@ -39,7 +39,7 @@ const Hero = () => {
               offset={-70}
               spy={true}
               activeClass="text-black font-semibold"
-              className="cursor-pointer text-gray-700 hover:text-black transition-colors duration-200 font-medium"
+              className="cursor-pointer text-gray-700 hover:text-black transition-colors duration-200 font-bold"
             >
               {name}
             </Link>
@@ -82,7 +82,7 @@ const Hero = () => {
       {/* Main section */}
       <div
       id="home"
-      className="px-6 lg:px-80 py-12 lg:py-20 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12"
+      className="px-6 lg:px-90 py-12 lg:py-20 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12"
     >
       {/* Left Content */}
       <div className="flex-1 max-w-2xl text-center lg:text-left">
@@ -141,7 +141,7 @@ const Hero = () => {
 
       {/* Right Content - Profile Image */}
       <div className="flex-1 flex justify-center lg:justify-end">
-        <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
+        <div className="w-72 h-72 lg:w-86 lg:h-86 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
           <img
             src={profile}
             alt="Ashim Ghising"
