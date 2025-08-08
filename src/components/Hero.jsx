@@ -82,7 +82,7 @@ const Hero = () => {
       {/* Main section */}
       <div
       id="home"
-      className="px-6 lg:px-90 py-12 lg:py-20 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12"
+      className="px-6 lg:px-90 py-12 lg:py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-6 lg:gap-12"
     >
       {/* Left Content */}
       <div className="flex-1 max-w-2xl text-center lg:text-left">
@@ -140,7 +140,7 @@ const Hero = () => {
       </div>
 
       {/* Right Content - Profile Image */}
-      <div className="flex-1 flex justify-center lg:justify-end">
+      <div className="flex-1  lg:justify-end">
         <div className="w-72 h-72 lg:w-86 lg:h-86 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
           <img
             src={profile}

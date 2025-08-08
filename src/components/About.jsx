@@ -4,9 +4,8 @@ import aboutpicture from "../assets/aboutpic1.jpg";
 const About = () => {
   return (
     <section className="min-h-screen px-6 lg:px-90 py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 bg-white text-gray-900">
-      <div className="flex-shrink-0">
-        <div className="flex-2 flex justify-center lg:justify-start ">
-          <div className="w-60 h-50 lg:w-85 lg:h-70 rounded-2xl overflow-hidden border-4 border-gray-100 shadow-lg">
+      <div className="flex-shrink-0 ">
+          <div className="w-full h-full lg:w-85 lg:h-70 rounded-2xl overflow-hidden border-4 border-gray-100 shadow-lg">
             <img
               src={aboutpicture}
               alt="Ashim Ghising"
@@ -17,10 +16,9 @@ const About = () => {
               }}
             />
           </div>
-        </div>
       </div>
 
-      <div className="flex-1 max-w-2xl text-center lg:text-left ">
+      <div className="max-w-2xl text-center lg:text-left ">
         <h2 className="font-bold text-blue-600">ABOUT ME</h2>
         <h2 className="lg:text-xl font-bold mb-2 ">A passionate Front-end Developer based in Nepal.</h2>
         <p className="text-gray-500 text-sm">
