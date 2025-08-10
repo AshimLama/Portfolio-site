@@ -1,9 +1,18 @@
 import React from "react";
 import aboutpicture from "../assets/aboutpic1.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="min-h-screen px-6 lg:px-90 py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 bg-white text-gray-900">
+    <motion.section 
+      id="about"
+      className="min-h-screen px-6 lg:px-90 py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-6 lg:gap-12 bg-white text-gray-900"
+      initial={{opacity: 0, y: 50 }}
+      whileInView={{opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.3 }}
+    >
+      
       <div className="flex-shrink-0 ">
           <div className="w-full h-full lg:w-85 lg:h-70 rounded-2xl overflow-hidden border-4 border-gray-100 shadow-lg">
             <img
@@ -33,7 +42,7 @@ const About = () => {
           communication and creativity in the development process.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

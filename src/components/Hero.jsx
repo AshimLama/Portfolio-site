@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Menu, X, MapPin, Linkedin, Github } from "lucide-react"; 
 import profile from "../assets/profile4.jpeg";
+import { motion } from "framer-motion";
 const Hero = () => {
   const navItems = [
     { name: "Home", target: "home" },
@@ -85,7 +86,13 @@ const Hero = () => {
       className="px-6 lg:px-90 py-12 lg:py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-6 lg:gap-12"
     >
       {/* Left Content */}
-      <div className="flex-1 max-w-2xl text-center lg:text-left">
+      <motion.div 
+        className="flex-1 max-w-2xl text-center lg:text-left"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         {/* Title */}
         <h1 className="text-2xl lg:text-5xl font-bold mb-6 text-black leading-tight">
           Front-End React Developer <span className="inline-block">👋</span>
@@ -108,7 +115,7 @@ const Hero = () => {
             <Linkedin className="text-blue-600" size={24} />
           </a>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/AshimLama"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 border rounded-lg hover:shadow-sm"
@@ -137,10 +144,16 @@ const Hero = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Right Content - Profile Image */}
-      <div className="flex-1  lg:justify-end">
+      <motion.div 
+        className="flex-1  lg:justify-end"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="w-72 h-72 lg:w-86 lg:h-86 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
           <img
             src={profile}
@@ -152,7 +165,7 @@ const Hero = () => {
             }}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
     </section>
   );
