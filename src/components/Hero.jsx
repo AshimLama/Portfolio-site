@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Menu, X, MapPin, Linkedin, Github } from "lucide-react"; 
-import profile from "../assets/profile4.jpeg";
+import profile from "../assets/Profile4.jpeg"; // Adjust the path as necessary
 import { motion } from "framer-motion";
 const Hero = () => {
   const navItems = [
